@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WhatToWear.Views.Main"
+             Title="Today's Weather and Outfit">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="20">
+            <!-- Header Section -->
+            <Label Text="Today's Weather and Outfit"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- Date and Location -->
+            <Label x:Name="dateLocationLabel"
+                   FontSize="16"
+                   HorizontalOptions="Center" />
+
+            <StackLayout Spacing="5" HorizontalOptions="Center">
+                <Label x:Name="temperatureLabel"
+                       Text="Temperature: Loading..."
+                       FontSize="16"
+                       HorizontalOptions="Center" />
+                <Label x:Name="precipitationLabel"
+                       Text="Precipitation: Loading..."
+                       FontSize="16"
+                       HorizontalOptions="Center" />
+                <Label x:Name="precipitationProbabilityLabel"
+                       Text="Precipitation Probability: Loading..."
+                       FontSize="16"
+                       HorizontalOptions="Center" />
+                <Label x:Name="dewPoint"
+                       Text="Dew Point: Loading..."
+                       FontSize="16"
+                       HorizontalOptions="Center" />
+                <Label x:Name="dailyMaxTemp"
+                       Text="dailyMaxTemp: Loading..."
+                       FontSize="16"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+
+            <!-- Weather Icon -->
+            <Image x:Name="weatherIcon"
+                   Source="sun.png" 
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Center" />
+
+            <!-- Recommended Outfit Section -->
+            <StackLayout Spacing="10">
+                <Label Text="Recommended Outfit"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Spacing="30">
+                    <Label Text="👕"
+                           FontSize="48"
+                           HorizontalOptions="Center" />
+                    <Label Text="🩳"
+                           FontSize="48"
+                           HorizontalOptions="Center" />
+                </StackLayout>
+                <Label x:Name="recommendationLabel"
+                       Text="Fetching recommendation..."
+                       FontSize="16"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+            
+
+            <StackLayout>
+                <Button Text="Reload"
+                        Clicked="OnReloadButtonClicked" />
+            </StackLayout>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
